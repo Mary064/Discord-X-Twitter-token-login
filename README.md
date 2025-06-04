@@ -33,4 +33,4 @@ The second way you can go to Discord && Twitter authorization forms and click on
 ### 🎃 Предосмотр / Prev Img
 ![UI Preview](./src/assets/img/prev.png)
 ![UI Preview](./src/assets/img/InputX.png)
-![UI Preview](./src/assets/img/InputDiscord.png)
+![UI Preview](./src/assets/img/inputDiscord.png)
