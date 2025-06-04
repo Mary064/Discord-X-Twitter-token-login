@@ -29,3 +29,8 @@
 🇬🇧
 In the extension there are two kinds of login by token first is the field where you need to insert the token (If it does not appear reload the page) 
 The second way you can go to Discord && Twitter authorization forms and click on the icon of the extension you will be prompted to insert the token and login
+
+### 🎃 Предосмотр / Prev Img
+![UI Preview](./src/assets/img/prev.png)
+![UI Preview](./src/assets/img/InputX.png)
+![UI Preview](./src/assets/img/InputDiscord.png)
