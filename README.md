@@ -1,4 +1,4 @@
-# 💖 Discord & X.com Token Login Extension 💖
+# 💖 Discord & X.com Token Login Extension for Chrome 💖
 
 ---
 
