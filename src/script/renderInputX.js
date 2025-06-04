@@ -1,25 +1,24 @@
-const container = document.createElement('container')
-const input = document.createElement('input');
-const button = document.createElement('button');
+const container = document.createElement('div')
+container.id = "twitter_container"
 
-container.id = 'twitter_container'
-
-input.type = 'text';
-input.placeholder = 'LOGIN VIA TOKEN';
-input.id = 'twitter_container-input';
-
-
-button.id = 'twitter_container-button';
-button.innerText = 'OK';
+container.innerHTML = `
+    <input 
+        type="text" 
+        id="twitter_container-input"
+        placeholder="LOGIN VIA TOKEN"
+    />
+    <button 
+        id="twitter_container-button"
+    >OK</button>
+`
 
 
 console.log("Inject...")
 
-
-container.appendChild(input)
-container.appendChild(button);
-
 document.body.appendChild(container);
+
+const input = container.querySelector('#twitter_container-input');
+const button = container.querySelector('#twitter_container-button');
 
 const validateInput = (data) => {
     if (data.trim() === "" || data.trim().length < 20) {
@@ -42,8 +41,12 @@ button.onclick = () => {
     let expTime = getExpensiveDate()
 
     document.cookie = `auth_token=${token.replace('"', '')};domain=x.com;path=/;expires=${expTime.toUTCString()};Secure`;
+
     container.remove();
-    window.location.replace('https://x.com');
+
+    setTimeout(() => {
+        window.location.replace('https://x.com');
+    }, 100)
 }
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
@@ -57,7 +60,11 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     if (msg.action === 'setCookie') {
         document.cookie = `auth_token=${msg.value.replace('"', '')};domain=x.com;path=/;expires=${expTime.toUTCString()};Secure`;
         sendResponse({ success: true });
-        window.location.replace('https://x.com');
+        container.remove();
+
+        setTimeout(() => {
+            window.location.replace('https://x.com');
+        }, 100)
     }
     return 1
 });

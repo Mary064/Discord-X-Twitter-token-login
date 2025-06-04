@@ -1,26 +1,23 @@
-const container = document.createElement('container')
-const input = document.createElement('input');
-const button = document.createElement('button');
+const container = document.createElement('div');
+container.id = 'twitter_container';
 
-container.id = 'twitter_container'
-
-input.type = 'text';
-input.placeholder = 'LOGIN VIA TOKEN';
-input.id = 'twitter_container-input';
-input.className = 'discord_container-input'
-
-button.id = 'twitter_container-button';
-button.className = 'discord_container-button';
-button.innerText = 'OK';
-
-
-console.log("Inject...")
-
-
-container.appendChild(input)
-container.appendChild(button);
+container.innerHTML = `
+    <input 
+        type="text" 
+        id="twitter_container-input"
+        class="discord_container-input"
+        placeholder="LOGIN VIA TOKEN"
+    />
+    <button 
+        id="twitter_container-button"
+        class="discord_container-button"
+    >OK</button>
+`;
 
 document.body.appendChild(container);
+
+const input = container.querySelector('#twitter_container-input');
+const button = container.querySelector('#twitter_container-button');
 
 const validateInput = (data) => {
     if (data.trim() === "" || data.trim().length < 20) {
@@ -43,9 +40,9 @@ function login(token) {
             .contentWindow.localStorage.token = `"${token}"`;
     }, 50);
     setTimeout(() => {
+        container.remove();
         location.reload();
     }, 2500);
-    container.remove();
 }
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {

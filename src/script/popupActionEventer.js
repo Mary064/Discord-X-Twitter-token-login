@@ -1,4 +1,4 @@
-document.getElementById('setCookiesX').addEventListener('click', async () => {
+document.getElementById('setCookies').addEventListener('click', async () => {
     const token = document.getElementById('textAreaInputToken').value;
 
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
