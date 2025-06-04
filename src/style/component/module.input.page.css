@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 
+
 #twitter_container {
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 30px;
+    align-items: center;
+    top: 50px;
     left: 50%;
     width: 400px;
     height: 40px;
@@ -43,6 +45,7 @@
 }
 
 
+
 #twitter_container-input {
     all: unset;
     width: 300px;
@@ -74,3 +77,15 @@
     }
 }
 
+.close-icon {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: -35px;
+    left: 48%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    &:hover {
+        fill: red;
+    }
+}
