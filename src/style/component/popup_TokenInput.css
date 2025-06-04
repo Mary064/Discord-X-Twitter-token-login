@@ -1,0 +1,27 @@
+
+.title {
+    margin-left: 10px;
+}
+
+.container_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#textAreaInputToken {
+    all: unset;
+    width: 190px;
+    margin-inline: 10px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    resize: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.button-login-x {
+    margin-bottom: 10px;
+}

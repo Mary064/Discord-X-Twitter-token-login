@@ -1,0 +1,16 @@
+:root {
+    --win-width: 200px;
+    --win-height: 200px;
+
+    --color-text: white;
+    --color-border: white;
+    --color-button-discord: #5865F2;
+    --color-button-x: #121212;
+
+    --button-height: 50px;
+    --button-width: 170px;
+
+    --button-text-size: 28px;
+
+    --font-incolata: 'Inconsolata', sans-serif;
+}

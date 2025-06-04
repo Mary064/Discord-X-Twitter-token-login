@@ -1,0 +1,76 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+#twitter_container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    width: 400px;
+    height: 40px;
+    transform: translateX(-50%);
+    z-index: 9999;
+    transition: all .3s ease;
+    font-family: Halvetica, sans-serif;
+}
+
+#twitter_container-button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #121212;
+    border: 1px solid white;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: all .3s ease;
+    &:hover {
+        color: black;
+        border-color: lightgreen;
+        background-color:  lightgreen;
+    }
+    &:active {
+        background-color: lightgreen;
+    }
+}
+
+
+#twitter_container-input {
+    all: unset;
+    width: 300px;
+    padding-left: 10px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    background-color: #121212;
+    transition: all .3s ease;
+    &:focus {
+        border: 1px solid skyblue;
+    }
+}
+
+.discord_container-input {
+    background-color: #5865F2 !important;
+}
+
+.discord_container-input::placeholder {
+    color: white;
+}
+
+.discord_container-button {
+    background-color: white !important;
+    &:hover {
+        background-color: greenyellow !important;
+    }
+}
+
